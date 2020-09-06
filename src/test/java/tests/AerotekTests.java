@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class AerotekTests extends TestBase{
     @Test
-    @DisplayName("Main page successfully open and has label \"A Global Recruiting & Staffing Agency\"")
+    @DisplayName("Main page successfully opens and has label \"A Global Recruiting & Staffing Agency\"")
     public void mainPageOpensTest() {
         open("https://www.aerotek.com/en/");
         $(".aerotek-ab-home-corporate-tagline").shouldHave(text("A Global Recruiting & Staffing Agency"));
@@ -33,8 +33,8 @@ public class AerotekTests extends TestBase{
     }
 
     @Test
-    @DisplayName("See Tony's Story successfully opens")
-    public void seeTonysStoryOpensFromMainPageTest() {
+    @DisplayName("See Tony's Story page successfully opens")
+    public void seeTonysStoryPageOpensTest() {
         open("https://www.aerotek.com/en/");
         $(Selectors.byTitle("Read Tony's Story")).click();
         $(".score-document-header").shouldHave(text("Tony Layne, Electromechanical Assembler"));
