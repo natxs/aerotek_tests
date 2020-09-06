@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class AerotekTests extends TestBase{
+public class AerotekTests {
     @Test
     @DisplayName("Main page successfully opens and has label \"A Global Recruiting & Staffing Agency\"")
     public void mainPageOpensTest() {
