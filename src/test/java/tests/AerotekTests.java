@@ -20,6 +20,7 @@ public class AerotekTests extends TestBase {
     @DisplayName("Career Opportunities page successfully opens")
     public void careerOpportunitiesPageOpensFromMainPageTest() {
         open("https://www.aerotek.com/en/");
+        if($(".optanon-alert-box-button.optanon-button-allow").exists()) { $(".optanon-alert-box-button.optanon-button-allow").click(); }
         $(Selectors.byText("CAREER OPPORTUNITIES")).click();
         $("body").shouldHave(text("Search our current openings or explore our specializations."));
     }
@@ -28,6 +29,7 @@ public class AerotekTests extends TestBase {
     @DisplayName("About Us page successfully opens")
     public void aboutUsPageOpensFromMainPageTest() {
         open("https://www.aerotek.com/en/");
+        if($(".optanon-alert-box-button.optanon-button-allow").exists()) { $(".optanon-alert-box-button.optanon-button-allow").click(); }
         $(Selectors.byText("About Us")).click();
         $("body").shouldHave(text("Our mission is as simple today as it was thirty plus years ago:"));
     }
